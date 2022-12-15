@@ -1,0 +1,46 @@
+Improvements Made:
+-	Improved ‘attack’ command:
+        o	The player can now choose to make specific attacks against the enemy; each round the player can choose to attack, use a potion to recover some health, or flee. After the user decides what to do, if the player chooses to attack or use a potion, then the monster attacks the player. This continues until either the monster dies, the player dies, or the player chooses to flee. 
+-	“drop” command
+        o	The player can drop items from their inventory and can also drop items that are equipped. 
+-	“wait” command 
+        o	Makes it so the player can type a command that just lets time pass. 
+-	“me” command
+        o	Returns the player’s repr, which lists out their stats. Shown stats/attributes include health, level, attack point, defense points, exp, items the player has equipped, money, and potions.
+-	Bigger world 
+        o	Special rooms other than those that can be generated via the room class include the regeneration room, store, locked room needing a key, locked code room, and start room.
+-	“inspect” command
+        o	Let the player look at an item’s description. The player can inspect items they see in their current location and items in their inventory.
+-	Regeneration
+        o	‘sleep’ command: the player can regenerate over a random allotment of time (representing sleeping hours) and gain back a little health each hour of sleep.
+        o	Regeneration room (special room): a room where the player can choose to regenerate which gradually regenerates the user’s health and visually shows the health increasing. The regeneration room is behind the locked door that needs a key. 
+-	Loot
+        o	After defeating a monster there is a random (1/4th) chance for health potion/potions to drop. Also, for every monster’s death, the player can receive 1-3 coins.
+-	More monsters 
+        o	There are three different levels of monsters. All monsters have the stats of attack, defense, health, and exp. Level one monsters have random stats that are low, level two monsters have random slightly higher stats, and level three monsters have powerful random stats. The names for each type of monster come from a list of monster names, varying according to the level (ex. Dragon is level 3, while slime is level 1).
+-	Player attributes
+        o	Stats include: health, attack points, defense points, current exp, level, max health, and max level. Attack and defense points impact the player’s ability to fight different levels of monsters and encourage the user to either level up, or get good gear. 
+-	Weapons
+        o	Weapons can increase a player’s attack points when equipped (if the weapon is just in the player’s inventory, then it doesn’t impact the player’s stats). Each weapon has a name, description, damage points (the amount that the player’s attack points increase by when equipped), and value (cost of the item in the store). Weapons range from weak items such as a rock, to powerful weapons such as a lightsaber. The player can only equip one weapon at a time.
+-	Armor
+        o	Similar to the weapons class, armor can increase a player’s defense points when equipped. Defense points are depleted first in battles instead of the player talking damage to their health. The player can equip multiple armor items. 
+-	Auto-generating monsters
+        o	There is a random chance for monsters to spawn in empty rooms, and there is a higher chance that low-level monsters spawn (i.e level 1 chance of spawning > level 2 chance of spawning > level 3 chance of spawning). 
+-	Healing items 
+        o	Potions are an item that can restore 20% of the player’s health. Each potion is only usable once and then disappears when used. A player cannot heal above their max health, and the player doesn’t lose a potion if they try. Potions are a part of the player class not a subclass of items.
+-	Locked chest/container
+        o	There exists a lock box that the player can unlock by solving a riddle. Once unlocked the player can use the box as a portable inventory (add item, remove item, and display can occur on the box when opened). The box only carries up to 5 items (it has a carry limit). The box is behind a locked door, and contains a weapon.
+-	Locked doors
+        o	Locked door needing key: There exists a locked door that needs a key to be opened. Once the player uses the key on the door it disappears from their inventory. 
+        o	Locked door needing passcode: The player needs to enter a 6-digit password to unlock this door. The passcode can be found on an item called scroll when inspected. 
+-	Helper
+        o	Create an autonomous character(s) in the game that is on your side and does something helpful. You should have some ability to control/influence how it behaves.
+-	Currency 
+        o	The player has the option of gaining currency in the form of coins. There is a shop which can be interacted with by typing “talkto store clerk” when in the location of the shop. The player has the option of buying potions, weapons, or armor from the shop. 
+-	Leveling up 
+        o	The player has exp, so when it reaches a specific amount the player levels up, which increases all the player’s stats, except the players defense, by a small amount. There is a level cap of 10 so the player doesn’t become too overpowered. Exp is gained by killing monsters, and the player gains the amount exp that is specified under the monster’s exp.
+-	Save / load game via Pickle 
+        o	The player can save the game using the command ‘save’. There is only one save slot though. Saving saves the player (which includes all their stats, items, and equipped stuff), and also the layout of the original world (not the world as how it was when saved). The player is presented with the option to load the game they saved when starting the game. Otherwise, the player can select to play a new game. 
+-	Mini games
+        o	There are two mini-games in the adventure. One of them is initiated by talking to the old man and the other is initiated by talking to the talking head. The game with the old man is a simple coin flip game where a player gives one of their coins and guesses heads to tails, if they guess correctly, they gain money, if they guess incorrectly then they lose the coin they gave the old man. This game is playable as long as the player has money. The game with the talking head is a choose the safe door game, where one door leads to something good and the other to the player’s death.
+
